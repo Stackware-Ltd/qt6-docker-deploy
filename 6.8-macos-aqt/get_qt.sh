@@ -29,10 +29,10 @@ echo
 echo '--> Download & install the Qt library using aqt'
 echo
 
-aqt install-qt -O "$QT_PATH" mac desktop "$QT_VERSION" || true
+aqt install-qt -O "$QT_PATH" mac desktop "$QT_VERSION" || true -m qt5compat qtquick3d qtvirtualkeyboard
 
 # Installing tools to execute cross-platform
-aqt install-qt -O "$QT_PATH" linux desktop "$QT_VERSION" linux_gcc_64
+aqt install-qt -O "$QT_PATH" linux desktop "$QT_VERSION" linux_gcc_64 -m qt5compat qtquick3d qtvirtualkeyboard
 aqt install-tool -O "$QT_PATH" linux desktop tools_cmake
 aqt install-tool -O "$QT_PATH" linux desktop tools_ninja
 

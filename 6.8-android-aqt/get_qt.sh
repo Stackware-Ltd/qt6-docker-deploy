@@ -30,7 +30,7 @@ echo '--> Download & install the Qt library using aqt'
 echo
 
 # Host Qt needed for cross-compilation
-aqt install-qt -O "$QT_PATH" linux desktop "$QT_VERSION" linux_gcc_64
+aqt install-qt -O "$QT_PATH" linux desktop "$QT_VERSION" linux_gcc_64 -m qt5compat qtquick3d qtvirtualkeyboard
 for abi in armv7 arm64_v8a x86 x86_64; do
     aqt install-qt -O "$QT_PATH" linux android "$QT_VERSION" "android_$abi"
 done

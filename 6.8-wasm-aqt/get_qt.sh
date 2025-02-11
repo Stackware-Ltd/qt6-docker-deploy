@@ -30,7 +30,7 @@ echo '--> Download & install the Qt library using aqt'
 echo
 
 # Host Qt needed for cross-compilation
-aqt install-qt -O "$QT_PATH" linux desktop "$QT_VERSION" linux_gcc_64
+aqt install-qt -O "$QT_PATH" linux desktop "$QT_VERSION" linux_gcc_64 -m qt5compat qtquick3d qtvirtualkeyboard
 
 aqt install-qt -O "$QT_PATH" all_os wasm "$QT_VERSION" wasm_singlethread
 aqt install-tool -O "$QT_PATH" linux desktop tools_cmake

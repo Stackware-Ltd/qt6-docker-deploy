@@ -33,7 +33,7 @@ echo
 
 sudo -E ln -s /usr/bin/wine64-stable /usr/local/bin/wine
 
-wine /tmp/aqt.exe install-qt -O "$QT_PATH" windows desktop "$QT_VERSION" win64_mingw
+wine /tmp/aqt.exe install-qt -O "$QT_PATH" windows desktop "$QT_VERSION" win64_mingw -m qt5compat qtquick3d qtvirtualkeyboard
 wine /tmp/aqt.exe install-tool -O "$QT_PATH" windows desktop tools_mingw90
 wine /tmp/aqt.exe install-tool -O "$QT_PATH" windows desktop tools_cmake
 wine /tmp/aqt.exe install-tool -O "$QT_PATH" windows desktop tools_ninja
